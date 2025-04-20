@@ -9,7 +9,7 @@ I ensure you though, that I have checked that each exercises comes with a soluti
 
 ## 1. Familiarize yourself with Spring Initialzr
 
-Create a new Spring Boot prouject using Spring Initializr.
+Create a new Spring Boot project using Spring Initializr.
 Inspect what each of the buttons in the Spring Initializr web UI does.
 Note there are at least four buttons to play around with.
 
@@ -28,7 +28,7 @@ To test your code use `curl` or Postman.
 Using curl you can test your code by running `curl -X GET http://localhost:8080/hello`.
 
 Learning questions:
-- What dependencies did you need to add to add to your Spring application?
+- What dependencies did you need to add to your Spring application?
 - What annotations did you have to use to create a REST controller?
 - What annotations did you have to use to create a REST endpoint?
 - Did you stumble upon other similar annotations, which were not originally what you were looking for? 
@@ -56,9 +56,28 @@ Exploration for integration tests:
 - Print out the complete content of sent request and returned response
 
 Learning questions:
-- What dependencies did you need to add to add to your Spring application?
+- What dependencies did you need to add to your Spring application?
 - What annotations did you have to use to create a unit test? 
 - What annotations did you have to use to create an integration test?
 - What is the difference between unit and integration tests?
 - If you used `@SpringBootTest` annotation, what other annotation could you have used to test web layer only?
+
+## 4. Create custom component beans and use them
+
+The goal of this exercise is to familiarize you with the annotations used for creating custom beans, without having
+to configure them separately.
+
+Create a class which has a single method. This method should print `Hello <parameter>!`, where the parameter should be
+passed to method as argument. Make this class a bean using a Spring annotation meant for this task. Now use the
+created bean in your REST controller from exercise #3 (call the method with argument "World" to keep tests passing).
+
+Learning questions:
+- What is a Spring bean?
+- Which annotation did you use to make a class managed bean?
+- Which other annotations could you have used to make this class a bean managed by Spring?
+- What are stereotype annotations?
+- What is the difference between different stereotype annotations?
+- Are stereotype annotations the only way to create Spring beans?
+- Which annotation did you use in order to make the bean instance accessible in your REST controller?
+- What is autowiring?
 
